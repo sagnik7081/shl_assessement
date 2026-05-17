@@ -1,0 +1,15 @@
+fastapi 
+uvicorn 
+python-dotenv 
+pydantic
+langchain 
+sentence-transformers 
+faiss-cpu
+langchain_community
+langchain_core
+langchain_groq
+pandas 
+numpy 
+scikit-learn 
+requests 
+beautifulsoup4
