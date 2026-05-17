@@ -514,6 +514,21 @@ class SHLRetriever:
                 ):
                     penalty += 0.20
 
+
+            # Java query should avoid .NET assessments
+
+            if "java" in query_lower:
+
+                if any(
+                    word in searchable_text
+                    for word in [
+                        ".net",
+                        "asp.net",
+                        "c#"
+                    ]
+                ):
+                    penalty += 0.40
+
             # ---------------------------------------------------------
             # CATEGORY BOOSTING
             # ---------------------------------------------------------
