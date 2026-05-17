@@ -461,14 +461,31 @@ class SHLRetriever:
             # EXACT SKILL MATCH BOOST
             # ---------------------------------------------------------
 
+            # ---------------------------------------------------------
+            # EXACT SKILL MATCH BOOST
+            # ---------------------------------------------------------
+
             for skill in important_skills:
 
                 if skill in searchable_text:
 
                     matched_skills.append(skill)
 
-                    bonus += 0.35
+                    # Strong framework/library boost
+                    if skill in [
+                        "spring",
+                        "spring boot",
+                        "react",
+                        "angular",
+                        "django",
+                        "flask",
+                        "fastapi"
+                    ]:
+                        bonus += 0.60
 
+                    # Normal tech boost
+                    else:
+                        bonus += 0.35
             # ---------------------------------------------------------
             # STACK CONSISTENCY PENALTIES
             # ---------------------------------------------------------
